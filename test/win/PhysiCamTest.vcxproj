@@ -1,0 +1,468 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{CE65EDB4-E17C-4421-8B93-7174C338D2D3}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>PhysiCamTest</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)..\bin\$(Configuration)\$(PlatformTarget)\</OutDir>
+    <IntDir>intermediate\$(Configuration)\$(PlatformTarget)\</IntDir>
+    <TargetName>$(ProjectName)_$(PlatformTarget)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <TargetName>$(ProjectName)_$(PlatformTarget)</TargetName>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)..\bin\$(Configuration)\$(PlatformTarget)\</OutDir>
+    <IntDir>intermediate\$(Configuration)\$(PlatformTarget)\</IntDir>
+    <TargetName>$(ProjectName)_$(PlatformTarget)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <TargetName>$(ProjectName)_$(PlatformTarget)</TargetName>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;FT2_BUILD_LIBRARY;_NOWORK_INTERNAL_;FREETYPE_GL_USE_VAO;TW_STATIC;ASSIMP_BUILD_NO_C4D_IMPORTER;ASSIMP_BUILD_NO_OPENGEX_IMPORTER;ASSIMP_BUILD_NO_X_IMPORTER;ASSIMP_BUILD_NO_MDL_IMPORTER;ASSIMP_BUILD_NO_ASSBIN_IMPORTER;ASSIMP_BUILD_NO_3D_IMPORTER;ASSIMP_BUILD_NO_MD3_IMPORTER;ASSIMP_BUILD_NO_MD2_IMPORTER;ASSIMP_BUILD_NO_PLY_IMPORTER;ASSIMP_BUILD_NO_ASE_IMPORTER;ASSIMP_BUILD_NO_HMP_IMPORTER;ASSIMP_BUILD_NO_MDC_IMPORTER;ASSIMP_BUILD_NO_MD5_IMPORTER;ASSIMP_BUILD_NO_LWO_IMPORTER;ASSIMP_BUILD_NO_DXF_IMPORTER;ASSIMP_BUILD_NO_NFF_IMPORTER;ASSIMP_BUILD_NO_OFF_IMPORTER;ASSIMP_BUILD_NO_AC_IMPORTER;ASSIMP_BUILD_NO_BVH_IMPORTER;ASSIMP_BUILD_NO_IRRMESH_IMPORTER;ASSIMP_BUILD_NO_IRR_IMPORTER;ASSIMP_BUILD_NO_Q3D_IMPORTER;ASSIMP_BUILD_NO_B3D_IMPORTER;ASSIMP_BUILD_NO_TERRAGEN_IMPORTER;ASSIMP_BUILD_NO_CSM_IMPORTER;ASSIMP_BUILD_NO_LWS_IMPORTER;ASSIMP_BUILD_NO_OGRE_IMPORTER;ASSIMP_BUILD_NO_MS3D_IMPORTER;ASSIMP_BUILD_NO_COB_IMPORTER;ASSIMP_BUILD_NO_Q3BSP_IMPORTER;ASSIMP_BUILD_NO_NDO_IMPORTER;ASSIMP_BUILD_NO_IFC_IMPORTER;ASSIMP_BUILD_NO_XGL_IMPORTER;ASSIMP_BUILD_NO_STL_IMPORTER;ASSIMP_BUILD_NO_EXPORT;GLEW_STATIC;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\include;..\include\AntTweakBar;..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\..\bin\$(Configuration)\$(PlatformTarget)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>PhysiCam_$(PlatformTarget).lib;OpenGL32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;FT2_BUILD_LIBRARY;_NOWORK_INTERNAL_;FREETYPE_GL_USE_VAO;TW_STATIC;ASSIMP_BUILD_NO_C4D_IMPORTER;ASSIMP_BUILD_NO_OPENGEX_IMPORTER;ASSIMP_BUILD_NO_X_IMPORTER;ASSIMP_BUILD_NO_MDL_IMPORTER;ASSIMP_BUILD_NO_ASSBIN_IMPORTER;ASSIMP_BUILD_NO_3D_IMPORTER;ASSIMP_BUILD_NO_MD3_IMPORTER;ASSIMP_BUILD_NO_MD2_IMPORTER;ASSIMP_BUILD_NO_PLY_IMPORTER;ASSIMP_BUILD_NO_ASE_IMPORTER;ASSIMP_BUILD_NO_HMP_IMPORTER;ASSIMP_BUILD_NO_MDC_IMPORTER;ASSIMP_BUILD_NO_MD5_IMPORTER;ASSIMP_BUILD_NO_LWO_IMPORTER;ASSIMP_BUILD_NO_DXF_IMPORTER;ASSIMP_BUILD_NO_NFF_IMPORTER;ASSIMP_BUILD_NO_OFF_IMPORTER;ASSIMP_BUILD_NO_AC_IMPORTER;ASSIMP_BUILD_NO_BVH_IMPORTER;ASSIMP_BUILD_NO_IRRMESH_IMPORTER;ASSIMP_BUILD_NO_IRR_IMPORTER;ASSIMP_BUILD_NO_Q3D_IMPORTER;ASSIMP_BUILD_NO_B3D_IMPORTER;ASSIMP_BUILD_NO_TERRAGEN_IMPORTER;ASSIMP_BUILD_NO_CSM_IMPORTER;ASSIMP_BUILD_NO_LWS_IMPORTER;ASSIMP_BUILD_NO_OGRE_IMPORTER;ASSIMP_BUILD_NO_MS3D_IMPORTER;ASSIMP_BUILD_NO_COB_IMPORTER;ASSIMP_BUILD_NO_Q3BSP_IMPORTER;ASSIMP_BUILD_NO_NDO_IMPORTER;ASSIMP_BUILD_NO_IFC_IMPORTER;ASSIMP_BUILD_NO_XGL_IMPORTER;ASSIMP_BUILD_NO_STL_IMPORTER;ASSIMP_BUILD_NO_EXPORT;GLEW_STATIC;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\include;..\include\AntTweakBar;..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\..\bin\$(Configuration)\$(PlatformTarget)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>PhysiCam_$(PlatformTarget).lib;OpenGL32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;FT2_BUILD_LIBRARY;_NOWORK_INTERNAL_;FREETYPE_GL_USE_VAO;TW_STATIC;ASSIMP_BUILD_NO_C4D_IMPORTER;ASSIMP_BUILD_NO_OPENGEX_IMPORTER;ASSIMP_BUILD_NO_X_IMPORTER;ASSIMP_BUILD_NO_MDL_IMPORTER;ASSIMP_BUILD_NO_ASSBIN_IMPORTER;ASSIMP_BUILD_NO_3D_IMPORTER;ASSIMP_BUILD_NO_MD3_IMPORTER;ASSIMP_BUILD_NO_MD2_IMPORTER;ASSIMP_BUILD_NO_PLY_IMPORTER;ASSIMP_BUILD_NO_ASE_IMPORTER;ASSIMP_BUILD_NO_HMP_IMPORTER;ASSIMP_BUILD_NO_MDC_IMPORTER;ASSIMP_BUILD_NO_MD5_IMPORTER;ASSIMP_BUILD_NO_LWO_IMPORTER;ASSIMP_BUILD_NO_DXF_IMPORTER;ASSIMP_BUILD_NO_NFF_IMPORTER;ASSIMP_BUILD_NO_OFF_IMPORTER;ASSIMP_BUILD_NO_AC_IMPORTER;ASSIMP_BUILD_NO_BVH_IMPORTER;ASSIMP_BUILD_NO_IRRMESH_IMPORTER;ASSIMP_BUILD_NO_IRR_IMPORTER;ASSIMP_BUILD_NO_Q3D_IMPORTER;ASSIMP_BUILD_NO_B3D_IMPORTER;ASSIMP_BUILD_NO_TERRAGEN_IMPORTER;ASSIMP_BUILD_NO_CSM_IMPORTER;ASSIMP_BUILD_NO_LWS_IMPORTER;ASSIMP_BUILD_NO_OGRE_IMPORTER;ASSIMP_BUILD_NO_MS3D_IMPORTER;ASSIMP_BUILD_NO_COB_IMPORTER;ASSIMP_BUILD_NO_Q3BSP_IMPORTER;ASSIMP_BUILD_NO_NDO_IMPORTER;ASSIMP_BUILD_NO_IFC_IMPORTER;ASSIMP_BUILD_NO_XGL_IMPORTER;ASSIMP_BUILD_NO_STL_IMPORTER;ASSIMP_BUILD_NO_EXPORT;_GLFW_USE_OPENGL;_GLFW_WIN32;_GLFW_WGL;GLEW_STATIC;FT2_BUILD_LIBRARY;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\include;..\include\AntTweakBar;..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>..\..\bin\$(Configuration)\$(PlatformTarget)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>PhysiCam_$(PlatformTarget).lib;OpenGL32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;FT2_BUILD_LIBRARY;_NOWORK_INTERNAL_;FREETYPE_GL_USE_VAO;TW_STATIC;ASSIMP_BUILD_NO_C4D_IMPORTER;ASSIMP_BUILD_NO_OPENGEX_IMPORTER;ASSIMP_BUILD_NO_X_IMPORTER;ASSIMP_BUILD_NO_MDL_IMPORTER;ASSIMP_BUILD_NO_ASSBIN_IMPORTER;ASSIMP_BUILD_NO_3D_IMPORTER;ASSIMP_BUILD_NO_MD3_IMPORTER;ASSIMP_BUILD_NO_MD2_IMPORTER;ASSIMP_BUILD_NO_PLY_IMPORTER;ASSIMP_BUILD_NO_ASE_IMPORTER;ASSIMP_BUILD_NO_HMP_IMPORTER;ASSIMP_BUILD_NO_MDC_IMPORTER;ASSIMP_BUILD_NO_MD5_IMPORTER;ASSIMP_BUILD_NO_LWO_IMPORTER;ASSIMP_BUILD_NO_DXF_IMPORTER;ASSIMP_BUILD_NO_NFF_IMPORTER;ASSIMP_BUILD_NO_OFF_IMPORTER;ASSIMP_BUILD_NO_AC_IMPORTER;ASSIMP_BUILD_NO_BVH_IMPORTER;ASSIMP_BUILD_NO_IRRMESH_IMPORTER;ASSIMP_BUILD_NO_IRR_IMPORTER;ASSIMP_BUILD_NO_Q3D_IMPORTER;ASSIMP_BUILD_NO_B3D_IMPORTER;ASSIMP_BUILD_NO_TERRAGEN_IMPORTER;ASSIMP_BUILD_NO_CSM_IMPORTER;ASSIMP_BUILD_NO_LWS_IMPORTER;ASSIMP_BUILD_NO_OGRE_IMPORTER;ASSIMP_BUILD_NO_MS3D_IMPORTER;ASSIMP_BUILD_NO_COB_IMPORTER;ASSIMP_BUILD_NO_Q3BSP_IMPORTER;ASSIMP_BUILD_NO_NDO_IMPORTER;ASSIMP_BUILD_NO_IFC_IMPORTER;ASSIMP_BUILD_NO_XGL_IMPORTER;ASSIMP_BUILD_NO_STL_IMPORTER;ASSIMP_BUILD_NO_EXPORT;_GLFW_USE_OPENGL;_GLFW_WIN32;_GLFW_WGL;GLEW_STATIC;FT2_BUILD_LIBRARY;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\include;..\include\AntTweakBar;..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>..\..\bin\$(Configuration)\$(PlatformTarget)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>PhysiCam_$(PlatformTarget).lib;OpenGL32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\AntTweakBar\LoadOGL.cpp" />
+    <ClCompile Include="..\src\AntTweakBar\LoadOGLCore.cpp" />
+    <ClCompile Include="..\src\AntTweakBar\TwBar.cpp" />
+    <ClCompile Include="..\src\AntTweakBar\TwColors.cpp" />
+    <ClCompile Include="..\src\AntTweakBar\TwEventGLFW.c" />
+    <ClCompile Include="..\src\AntTweakBar\TwFonts.cpp" />
+    <ClCompile Include="..\src\AntTweakBar\TwMgr.cpp" />
+    <ClCompile Include="..\src\AntTweakBar\TwOpenGL.cpp" />
+    <ClCompile Include="..\src\AntTweakBar\TwOpenGLCore.cpp" />
+    <ClCompile Include="..\src\assimp\code\3DSConverter.cpp" />
+    <ClCompile Include="..\src\assimp\code\3DSExporter.cpp" />
+    <ClCompile Include="..\src\assimp\code\3DSLoader.cpp" />
+    <ClCompile Include="..\src\assimp\code\ACLoader.cpp" />
+    <ClCompile Include="..\src\assimp\code\ASELoader.cpp" />
+    <ClCompile Include="..\src\assimp\code\ASEParser.cpp" />
+    <ClCompile Include="..\src\assimp\code\AssbinExporter.cpp" />
+    <ClCompile Include="..\src\assimp\code\AssbinLoader.cpp" />
+    <ClCompile Include="..\src\assimp\code\Assimp.cpp" />
+    <ClCompile Include="..\src\assimp\code\AssimpCExport.cpp" />
+    <ClCompile Include="..\src\assimp\code\AssxmlExporter.cpp" />
+    <ClCompile Include="..\src\assimp\code\B3DImporter.cpp" />
+    <ClCompile Include="..\src\assimp\code\BaseImporter.cpp" />
+    <ClCompile Include="..\src\assimp\code\BaseProcess.cpp" />
+    <ClCompile Include="..\src\assimp\code\Bitmap.cpp" />
+    <ClCompile Include="..\src\assimp\code\BlenderBMesh.cpp" />
+    <ClCompile Include="..\src\assimp\code\BlenderDNA.cpp" />
+    <ClCompile Include="..\src\assimp\code\BlenderLoader.cpp" />
+    <ClCompile Include="..\src\assimp\code\BlenderModifier.cpp" />
+    <ClCompile Include="..\src\assimp\code\BlenderScene.cpp" />
+    <ClCompile Include="..\src\assimp\code\BlenderTessellator.cpp" />
+    <ClCompile Include="..\src\assimp\code\BVHLoader.cpp" />
+    <ClCompile Include="..\src\assimp\code\C4DImporter.cpp" />
+    <ClCompile Include="..\src\assimp\code\CalcTangentsProcess.cpp" />
+    <ClCompile Include="..\src\assimp\code\COBLoader.cpp" />
+    <ClCompile Include="..\src\assimp\code\ColladaExporter.cpp" />
+    <ClCompile Include="..\src\assimp\code\ColladaLoader.cpp" />
+    <ClCompile Include="..\src\assimp\code\ColladaParser.cpp" />
+    <ClCompile Include="..\src\assimp\code\ComputeUVMappingProcess.cpp" />
+    <ClCompile Include="..\src\assimp\code\ConvertToLHProcess.cpp" />
+    <ClCompile Include="..\src\assimp\code\CSMLoader.cpp" />
+    <ClCompile Include="..\src\assimp\code\DeboneProcess.cpp" />
+    <ClCompile Include="..\src\assimp\code\DefaultIOStream.cpp" />
+    <ClCompile Include="..\src\assimp\code\DefaultIOSystem.cpp" />
+    <ClCompile Include="..\src\assimp\code\DefaultLogger.cpp" />
+    <ClCompile Include="..\src\assimp\code\DXFLoader.cpp" />
+    <ClCompile Include="..\src\assimp\code\Exporter.cpp" />
+    <ClCompile Include="..\src\assimp\code\FBXAnimation.cpp" />
+    <ClCompile Include="..\src\assimp\code\FBXBinaryTokenizer.cpp" />
+    <ClCompile Include="..\src\assimp\code\FBXConverter.cpp" />
+    <ClCompile Include="..\src\assimp\code\FBXDeformer.cpp" />
+    <ClCompile Include="..\src\assimp\code\FBXDocument.cpp" />
+    <ClCompile Include="..\src\assimp\code\FBXDocumentUtil.cpp" />
+    <ClCompile Include="..\src\assimp\code\FBXImporter.cpp" />
+    <ClCompile Include="..\src\assimp\code\FBXMaterial.cpp" />
+    <ClCompile Include="..\src\assimp\code\FBXMeshGeometry.cpp" />
+    <ClCompile Include="..\src\assimp\code\FBXModel.cpp" />
+    <ClCompile Include="..\src\assimp\code\FBXNodeAttribute.cpp" />
+    <ClCompile Include="..\src\assimp\code\FBXParser.cpp" />
+    <ClCompile Include="..\src\assimp\code\FBXProperties.cpp" />
+    <ClCompile Include="..\src\assimp\code\FBXTokenizer.cpp" />
+    <ClCompile Include="..\src\assimp\code\FBXUtil.cpp" />
+    <ClCompile Include="..\src\assimp\code\FindDegenerates.cpp" />
+    <ClCompile Include="..\src\assimp\code\FindInstancesProcess.cpp" />
+    <ClCompile Include="..\src\assimp\code\FindInvalidDataProcess.cpp" />
+    <ClCompile Include="..\src\assimp\code\FixNormalsStep.cpp" />
+    <ClCompile Include="..\src\assimp\code\GenFaceNormalsProcess.cpp" />
+    <ClCompile Include="..\src\assimp\code\GenVertexNormalsProcess.cpp" />
+    <ClCompile Include="..\src\assimp\code\glTFImporter.cpp" />
+    <ClCompile Include="..\src\assimp\code\HMPLoader.cpp" />
+    <ClCompile Include="..\src\assimp\code\IFCBoolean.cpp" />
+    <ClCompile Include="..\src\assimp\code\IFCCurve.cpp" />
+    <ClCompile Include="..\src\assimp\code\IFCGeometry.cpp" />
+    <ClCompile Include="..\src\assimp\code\IFCLoader.cpp" />
+    <ClCompile Include="..\src\assimp\code\IFCMaterial.cpp" />
+    <ClCompile Include="..\src\assimp\code\IFCOpenings.cpp" />
+    <ClCompile Include="..\src\assimp\code\IFCProfile.cpp" />
+    <ClCompile Include="..\src\assimp\code\IFCReaderGen.cpp" />
+    <ClCompile Include="..\src\assimp\code\IFCUtil.cpp" />
+    <ClCompile Include="..\src\assimp\code\Importer.cpp" />
+    <ClCompile Include="..\src\assimp\code\ImporterRegistry.cpp" />
+    <ClCompile Include="..\src\assimp\code\ImproveCacheLocality.cpp" />
+    <ClCompile Include="..\src\assimp\code\IRRLoader.cpp" />
+    <ClCompile Include="..\src\assimp\code\IRRMeshLoader.cpp" />
+    <ClCompile Include="..\src\assimp\code\IRRShared.cpp" />
+    <ClCompile Include="..\src\assimp\code\JoinVerticesProcess.cpp" />
+    <ClCompile Include="..\src\assimp\code\LimitBoneWeightsProcess.cpp" />
+    <ClCompile Include="..\src\assimp\code\LWOAnimation.cpp" />
+    <ClCompile Include="..\src\assimp\code\LWOBLoader.cpp" />
+    <ClCompile Include="..\src\assimp\code\LWOLoader.cpp" />
+    <ClCompile Include="..\src\assimp\code\LWOMaterial.cpp" />
+    <ClCompile Include="..\src\assimp\code\LWSLoader.cpp" />
+    <ClCompile Include="..\src\assimp\code\MakeVerboseFormat.cpp" />
+    <ClCompile Include="..\src\assimp\code\MaterialSystem.cpp" />
+    <ClCompile Include="..\src\assimp\code\MD2Loader.cpp" />
+    <ClCompile Include="..\src\assimp\code\MD3Loader.cpp" />
+    <ClCompile Include="..\src\assimp\code\MD5Loader.cpp" />
+    <ClCompile Include="..\src\assimp\code\MD5Parser.cpp" />
+    <ClCompile Include="..\src\assimp\code\MDCLoader.cpp" />
+    <ClCompile Include="..\src\assimp\code\MDLLoader.cpp" />
+    <ClCompile Include="..\src\assimp\code\MDLMaterialLoader.cpp" />
+    <ClCompile Include="..\src\assimp\code\MS3DLoader.cpp" />
+    <ClCompile Include="..\src\assimp\code\NDOLoader.cpp" />
+    <ClCompile Include="..\src\assimp\code\NFFLoader.cpp" />
+    <ClCompile Include="..\src\assimp\code\ObjExporter.cpp" />
+    <ClCompile Include="..\src\assimp\code\ObjFileImporter.cpp" />
+    <ClCompile Include="..\src\assimp\code\ObjFileMtlImporter.cpp" />
+    <ClCompile Include="..\src\assimp\code\ObjFileParser.cpp" />
+    <ClCompile Include="..\src\assimp\code\OFFLoader.cpp" />
+    <ClCompile Include="..\src\assimp\code\OgreBinarySerializer.cpp" />
+    <ClCompile Include="..\src\assimp\code\OgreImporter.cpp" />
+    <ClCompile Include="..\src\assimp\code\OgreMaterial.cpp" />
+    <ClCompile Include="..\src\assimp\code\OgreStructs.cpp" />
+    <ClCompile Include="..\src\assimp\code\OgreXmlSerializer.cpp" />
+    <ClCompile Include="..\src\assimp\code\OpenGEXImporter.cpp" />
+    <ClCompile Include="..\src\assimp\code\OptimizeGraph.cpp" />
+    <ClCompile Include="..\src\assimp\code\OptimizeMeshes.cpp" />
+    <ClCompile Include="..\src\assimp\code\PlyExporter.cpp" />
+    <ClCompile Include="..\src\assimp\code\PlyLoader.cpp" />
+    <ClCompile Include="..\src\assimp\code\PlyParser.cpp" />
+    <ClCompile Include="..\src\assimp\code\PostStepRegistry.cpp" />
+    <ClCompile Include="..\src\assimp\code\PretransformVertices.cpp" />
+    <ClCompile Include="..\src\assimp\code\ProcessHelper.cpp" />
+    <ClCompile Include="..\src\assimp\code\Q3BSPFileImporter.cpp" />
+    <ClCompile Include="..\src\assimp\code\Q3BSPFileParser.cpp" />
+    <ClCompile Include="..\src\assimp\code\Q3BSPZipArchive.cpp" />
+    <ClCompile Include="..\src\assimp\code\Q3DLoader.cpp" />
+    <ClCompile Include="..\src\assimp\code\RawLoader.cpp" />
+    <ClCompile Include="..\src\assimp\code\RemoveComments.cpp" />
+    <ClCompile Include="..\src\assimp\code\RemoveRedundantMaterials.cpp" />
+    <ClCompile Include="..\src\assimp\code\RemoveVCProcess.cpp" />
+    <ClCompile Include="..\src\assimp\code\SceneCombiner.cpp" />
+    <ClCompile Include="..\src\assimp\code\ScenePreprocessor.cpp" />
+    <ClCompile Include="..\src\assimp\code\SGSpatialSort.cpp" />
+    <ClCompile Include="..\src\assimp\code\SkeletonMeshBuilder.cpp" />
+    <ClCompile Include="..\src\assimp\code\SMDLoader.cpp" />
+    <ClCompile Include="..\src\assimp\code\SortByPTypeProcess.cpp" />
+    <ClCompile Include="..\src\assimp\code\SpatialSort.cpp" />
+    <ClCompile Include="..\src\assimp\code\SplitByBoneCountProcess.cpp" />
+    <ClCompile Include="..\src\assimp\code\SplitLargeMeshes.cpp" />
+    <ClCompile Include="..\src\assimp\code\StandardShapes.cpp" />
+    <ClCompile Include="..\src\assimp\code\StepExporter.cpp" />
+    <ClCompile Include="..\src\assimp\code\STEPFileEncoding.cpp" />
+    <ClCompile Include="..\src\assimp\code\STEPFileReader.cpp" />
+    <ClCompile Include="..\src\assimp\code\STLExporter.cpp" />
+    <ClCompile Include="..\src\assimp\code\STLLoader.cpp" />
+    <ClCompile Include="..\src\assimp\code\Subdivision.cpp" />
+    <ClCompile Include="..\src\assimp\code\TargetAnimation.cpp" />
+    <ClCompile Include="..\src\assimp\code\TerragenLoader.cpp" />
+    <ClCompile Include="..\src\assimp\code\TextureTransform.cpp" />
+    <ClCompile Include="..\src\assimp\code\TriangulateProcess.cpp" />
+    <ClCompile Include="..\src\assimp\code\UnrealLoader.cpp" />
+    <ClCompile Include="..\src\assimp\code\ValidateDataStructure.cpp" />
+    <ClCompile Include="..\src\assimp\code\Version.cpp" />
+    <ClCompile Include="..\src\assimp\code\VertexTriangleAdjacency.cpp" />
+    <ClCompile Include="..\src\assimp\code\XFileExporter.cpp" />
+    <ClCompile Include="..\src\assimp\code\XFileImporter.cpp" />
+    <ClCompile Include="..\src\assimp\code\XFileParser.cpp" />
+    <ClCompile Include="..\src\assimp\code\XGLLoader.cpp" />
+    <ClCompile Include="..\src\assimp\contrib\ConvertUTF\ConvertUTF.c" />
+    <ClCompile Include="..\src\assimp\contrib\irrXML\irrXML.cpp" />
+    <ClCompile Include="..\src\assimp\contrib\poly2tri\poly2tri\common\shapes.cc" />
+    <ClCompile Include="..\src\assimp\contrib\poly2tri\poly2tri\sweep\advancing_front.cc" />
+    <ClCompile Include="..\src\assimp\contrib\poly2tri\poly2tri\sweep\cdt.cc" />
+    <ClCompile Include="..\src\assimp\contrib\poly2tri\poly2tri\sweep\sweep.cc" />
+    <ClCompile Include="..\src\assimp\contrib\poly2tri\poly2tri\sweep\sweep_context.cc" />
+    <ClCompile Include="..\src\assimp\contrib\zlib\adler32.c" />
+    <ClCompile Include="..\src\assimp\contrib\zlib\crc32.c" />
+    <ClCompile Include="..\src\assimp\contrib\zlib\gzlib.c" />
+    <ClCompile Include="..\src\assimp\contrib\zlib\inffast.c" />
+    <ClCompile Include="..\src\assimp\contrib\zlib\inflate.c" />
+    <ClCompile Include="..\src\assimp\contrib\zlib\inftrees.c" />
+    <ClCompile Include="..\src\assimp\contrib\zlib\zutil.c" />
+    <ClCompile Include="..\src\freetype-gl\edtaa3func.c" />
+    <ClCompile Include="..\src\freetype-gl\font-manager.c" />
+    <ClCompile Include="..\src\freetype-gl\mat4.c" />
+    <ClCompile Include="..\src\freetype-gl\platform.c" />
+    <ClCompile Include="..\src\freetype-gl\shader-ft.c" />
+    <ClCompile Include="..\src\freetype-gl\text-buffer.c" />
+    <ClCompile Include="..\src\freetype-gl\texture-atlas.c" />
+    <ClCompile Include="..\src\freetype-gl\texture-font.c" />
+    <ClCompile Include="..\src\freetype-gl\vector.c" />
+    <ClCompile Include="..\src\freetype-gl\vertex-attribute.c" />
+    <ClCompile Include="..\src\freetype-gl\vertex-buffer.c" />
+    <ClCompile Include="..\src\freetype\autofit\autofit.c" />
+    <ClCompile Include="..\src\freetype\base\ftbase.c" />
+    <ClCompile Include="..\src\freetype\base\ftbbox.c" />
+    <ClCompile Include="..\src\freetype\base\ftbitmap.c" />
+    <ClCompile Include="..\src\freetype\base\ftdebug.c" />
+    <ClCompile Include="..\src\freetype\base\ftfntfmt.c" />
+    <ClCompile Include="..\src\freetype\base\ftfstype.c" />
+    <ClCompile Include="..\src\freetype\base\ftgasp.c" />
+    <ClCompile Include="..\src\freetype\base\ftglyph.c" />
+    <ClCompile Include="..\src\freetype\base\ftgxval.c" />
+    <ClCompile Include="..\src\freetype\base\ftinit.c" />
+    <ClCompile Include="..\src\freetype\base\ftlcdfil.c" />
+    <ClCompile Include="..\src\freetype\base\ftmm.c" />
+    <ClCompile Include="..\src\freetype\base\ftotval.c" />
+    <ClCompile Include="..\src\freetype\base\ftpatent.c" />
+    <ClCompile Include="..\src\freetype\base\ftpfr.c" />
+    <ClCompile Include="..\src\freetype\base\ftstroke.c" />
+    <ClCompile Include="..\src\freetype\base\ftsynth.c" />
+    <ClCompile Include="..\src\freetype\base\ftsystem.c" />
+    <ClCompile Include="..\src\freetype\base\fttype1.c" />
+    <ClCompile Include="..\src\freetype\base\ftwinfnt.c" />
+    <ClCompile Include="..\src\freetype\bdf\bdf.c" />
+    <ClCompile Include="..\src\freetype\cache\ftcache.c" />
+    <ClCompile Include="..\src\freetype\cff\cff.c" />
+    <ClCompile Include="..\src\freetype\cid\type1cid.c" />
+    <ClCompile Include="..\src\freetype\gzip\ftgzip.c" />
+    <ClCompile Include="..\src\freetype\lzw\ftlzw.c" />
+    <ClCompile Include="..\src\freetype\pcf\pcf.c" />
+    <ClCompile Include="..\src\freetype\pfr\pfr.c" />
+    <ClCompile Include="..\src\freetype\psaux\psaux.c" />
+    <ClCompile Include="..\src\freetype\pshinter\pshinter.c" />
+    <ClCompile Include="..\src\freetype\psnames\psmodule.c" />
+    <ClCompile Include="..\src\freetype\raster\raster.c" />
+    <ClCompile Include="..\src\freetype\sfnt\sfnt.c" />
+    <ClCompile Include="..\src\freetype\smooth\smooth.c" />
+    <ClCompile Include="..\src\freetype\truetype\truetype.c" />
+    <ClCompile Include="..\src\freetype\type1\type1.c" />
+    <ClCompile Include="..\src\freetype\type42\type42.c" />
+    <ClCompile Include="..\src\freetype\winfonts\winfnt.c" />
+    <ClCompile Include="..\src\gl3w\gl3w.c" />
+    <ClCompile Include="..\src\NoWork\AsyncGLWorker.cpp" />
+    <ClCompile Include="..\src\NoWork\EventHandler.cpp" />
+    <ClCompile Include="..\src\NoWork\FileSystem.cpp" />
+    <ClCompile Include="..\src\NoWork\Font.cpp" />
+    <ClCompile Include="..\src\NoWork\Framebuffer.cpp" />
+    <ClCompile Include="..\src\NoWork\Framework.cpp" />
+    <ClCompile Include="..\src\NoWork\Input.cpp" />
+    <ClCompile Include="..\src\NoWork\Log.cpp" />
+    <ClCompile Include="..\src\NoWork\Material.cpp" />
+    <ClCompile Include="..\src\NoWork\Mesh.cpp" />
+    <ClCompile Include="..\src\NoWork\Model.cpp" />
+    <ClCompile Include="..\src\NoWork\Quaternion.cpp" />
+    <ClCompile Include="..\src\NoWork\Renderer.cpp" />
+    <ClCompile Include="..\src\NoWork\RenderTexture.cpp" />
+    <ClCompile Include="..\src\NoWork\Shader.cpp" />
+    <ClCompile Include="..\src\NoWork\Texture.cpp" />
+    <ClCompile Include="..\src\NoWork\Texture2D.cpp" />
+    <ClCompile Include="..\src\physiCamTest.cpp" />
+    <ClCompile Include="..\src\soil\image_DXT.c" />
+    <ClCompile Include="..\src\soil\image_helper.c" />
+    <ClCompile Include="..\src\soil\SOIL.c" />
+    <ClCompile Include="..\src\soil\stb_image_aug.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\win\win.licenseheader" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\freetype-gl\edtaa3func.h" />
+    <ClInclude Include="..\include\freetype-gl\font-manager.h" />
+    <ClInclude Include="..\include\freetype-gl\freetype-gl.h" />
+    <ClInclude Include="..\include\freetype-gl\markup.h" />
+    <ClInclude Include="..\include\freetype-gl\mat4.h" />
+    <ClInclude Include="..\include\freetype-gl\opengl.h" />
+    <ClInclude Include="..\include\freetype-gl\platform.h" />
+    <ClInclude Include="..\include\freetype-gl\shader-ft.h" />
+    <ClInclude Include="..\include\freetype-gl\text-buffer.h" />
+    <ClInclude Include="..\include\freetype-gl\texture-atlas.h" />
+    <ClInclude Include="..\include\freetype-gl\texture-font.h" />
+    <ClInclude Include="..\include\freetype-gl\vec234.h" />
+    <ClInclude Include="..\include\freetype-gl\vector.h" />
+    <ClInclude Include="..\include\freetype-gl\vertex-attribute.h" />
+    <ClInclude Include="..\include\freetype-gl\vertex-buffer.h" />
+    <ClInclude Include="..\include\NoWork\Area.h" />
+    <ClInclude Include="..\include\NoWork\AsyncGLWorker.h" />
+    <ClInclude Include="..\include\NoWork\Common.h" />
+    <ClInclude Include="..\include\NoWork\EventHandler.h" />
+    <ClInclude Include="..\include\NoWork\FileSystem.h" />
+    <ClInclude Include="..\include\NoWork\Font.h" />
+    <ClInclude Include="..\include\NoWork\Framebuffer.h" />
+    <ClInclude Include="..\include\NoWork\Framework.h" />
+    <ClInclude Include="..\include\NoWork\Game.h" />
+    <ClInclude Include="..\include\NoWork\Input.h" />
+    <ClInclude Include="..\include\NoWork\Log.h" />
+    <ClInclude Include="..\include\NoWork\Material.h" />
+    <ClInclude Include="..\include\NoWork\Mesh.h" />
+    <ClInclude Include="..\include\NoWork\Model.h" />
+    <ClInclude Include="..\include\NoWork\NoWork.h" />
+    <ClInclude Include="..\include\NoWork\Renderer.h" />
+    <ClInclude Include="..\include\NoWork\RenderTexture.h" />
+    <ClInclude Include="..\include\NoWork\SceneObject.h" />
+    <ClInclude Include="..\include\NoWork\Shader.h" />
+    <ClInclude Include="..\include\NoWork\Texture.h" />
+    <ClInclude Include="..\include\NoWork\Texture2D.h" />
+    <ClInclude Include="..\include\NoWork\Transform.h" />
+    <ClInclude Include="..\include\physiCamTest.h" />
+    <ClInclude Include="..\include\soil\image_DXT.h" />
+    <ClInclude Include="..\include\soil\image_helper.h" />
+    <ClInclude Include="..\include\soil\SOIL.h" />
+    <ClInclude Include="..\include\soil\stbi_DDS_aug.h" />
+    <ClInclude Include="..\include\soil\stbi_DDS_aug_c.h" />
+    <ClInclude Include="..\include\soil\stb_image_aug.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="glfw.vcxproj">
+      <Project>{81398f05-fa09-44ac-9127-6f163aa30ecc}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
