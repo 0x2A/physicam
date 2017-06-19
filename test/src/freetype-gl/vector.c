@@ -363,4 +363,6 @@ namespace ftgl {
 		qsort(self->items, self->size, self->item_size, cmp);
 	}
 
+#ifdef __cplusplus
 }
+#endif

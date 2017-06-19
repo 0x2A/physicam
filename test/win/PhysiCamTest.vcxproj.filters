@@ -243,9 +243,6 @@
     <ClCompile Include="..\src\freetype-gl\texture-atlas.c">
       <Filter>Quelldateien\freetype-gl</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\freetype-gl\texture-font.c">
-      <Filter>Quelldateien\freetype-gl</Filter>
-    </ClCompile>
     <ClCompile Include="..\src\freetype-gl\vector.c">
       <Filter>Quelldateien\freetype-gl</Filter>
     </ClCompile>
@@ -779,6 +776,9 @@
     </ClCompile>
     <ClCompile Include="..\src\AntTweakBar\TwEventGLFW.c">
       <Filter>Quelldateien\AntTweakBar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\freetype-gl\texture-font.cpp">
+      <Filter>Quelldateien\freetype-gl</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

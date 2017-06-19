@@ -341,7 +341,7 @@
     <ClCompile Include="..\src\freetype-gl\shader-ft.c" />
     <ClCompile Include="..\src\freetype-gl\text-buffer.c" />
     <ClCompile Include="..\src\freetype-gl\texture-atlas.c" />
-    <ClCompile Include="..\src\freetype-gl\texture-font.c" />
+    <ClCompile Include="..\src\freetype-gl\texture-font.cpp" />
     <ClCompile Include="..\src\freetype-gl\vector.c" />
     <ClCompile Include="..\src\freetype-gl\vertex-attribute.c" />
     <ClCompile Include="..\src\freetype-gl\vertex-buffer.c" />
