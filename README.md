@@ -43,7 +43,8 @@ Now we need to initialize the PhysiCam internal system by calling the static fun
 if (!PhysiCam::Camera::Init())
 {
 	LOG_ERROR("failed to initialize PhysiCam");
-}```
+}
+```
 
 Then we create a physiCam object
 ```
@@ -52,7 +53,6 @@ PhysiCam::CameraPtr physicam = std::make_shared<PhysiCam::Camera>(m_FramebufferW
 
 `m_FramebufferWidth` and `m_FramebufferHeight` are the integer sizes of your screen or framebuffer.
 
-***
 
 ##### postprocessing
 
@@ -181,7 +181,6 @@ void Render()
 * *soil*
 * [NoWork](https://github.com/0x2A/NoWork)
 
-***
 
 ## Contributing
 
