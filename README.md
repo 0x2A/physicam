@@ -33,7 +33,7 @@ Just open the Visual Studio solution in `win\PhysiCam.sln` and build the PhysiCa
 
 This instructions will give you a quick example of how to use PhysiCam in your project.
 
-##### initializing
+#### initializing
 
 First, we need to include the physicam header:
 `#include <physicam.h>`
@@ -54,9 +54,9 @@ PhysiCam::CameraPtr physicam = std::make_shared<PhysiCam::Camera>(m_FramebufferW
 `m_FramebufferWidth` and `m_FramebufferHeight` are the integer sizes of your screen or framebuffer.
 
 
-##### postprocessing
+#### postprocessing
 
-==PhysiCam needs two rendertextures: A RGB 32-float texture as color buffer (GL_COLOR_ATTACHMENT0) and a depth texture (GL_DEPTH_ATTACHMENT)==
+*PhysiCam needs two rendertextures: A RGB 32-float texture as color buffer (GL_COLOR_ATTACHMENT0) and a depth texture (GL_DEPTH_ATTACHMENT)*
 
 To use the builtin postprocessing, we need to tell PhysiCam, which framebuffer objects to use for input and output. To do this, we use the `PhysiCamFBOInputDesc` struct.
 Create a local or global variable and put the render texture ids into the struct:
@@ -71,7 +71,7 @@ This way we tell PhysiCam which render textures to use for postprocessing input.
 
 Thats all for setting things up. Now we can use the camera.
 
-##### Update/Usage
+#### Update/Usage
 
 One of the main things we need is to setup the view matrix on every frame update. You can either use your own calculations and just provide the matrix to PhysiCam:
 `physicam->GetTransform()->SetModelMatrix(mat);`
@@ -82,10 +82,10 @@ To set camera parameters, just call the accociated function, i.e. `physicam->Set
 
 To set postprocessing parameters (i.e. inside your update function), get the postprocessor by calling `auto pp = physicam->GetPostProcessor()`. Now you can set every camera postprocessing parameters, i.e: `pp->SetDoFFocalDistance(m_FocalDistance);`
 
-==**Important:** Always call `physicam->Update(deltaTime);` in the end of your update function to update all camera internal matrices and parameters. ==
+**Important: Always call `physicam->Update(deltaTime);` in the end of your update function to update all camera internal matrices and parameters.**
 
 
-##### Rendering
+#### Rendering
 
 For rendering with PhysiCam, just render your scene in the way you always/already do, just make sure verything gets rendered into the previous defined framebuffer/rendertextures and use the same matrices you hand over to physicam previously.
 If you have used the builtin transform class, you can get view and model matrices by calling `physicam->GetViewMatrix()` and `physicam->GetProjectionMatrix()` or get a precalculated View-Projection matrix by calling `GetViewProjectionMatrix()`. Use them to render your objects.
@@ -95,7 +95,7 @@ As you can see, we here hand over the previously defined `PhysiCamFBOInputDesc` 
 The last parameter is the framebuffer id of the output buffer. Here we provide 0, so the final image will be rendered to the default output, which is normally the window back buffer. This will show the final image on the screen.
 Feel free to use your own postprocessing on the hand over framebuffer before calling `RenderPostProcessing`, to do it afterwards, just use your own framebuffer object id as last parameter and do your Postprocessing on it.
 
-##### Complete example
+#### Complete example
 
 ```C++
 // in main()
