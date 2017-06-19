@@ -1,4 +1,4 @@
-# PhysiCam #
+# PhysiCam
 
 
 Physicam is an OpenGL library, which provides physically based camera rendering and parameters. It is based on OpenGL and designed to be used as either static library or dynamic library and can be integrated in existing applications.
@@ -19,21 +19,21 @@ This repository contains the PhysiCam source code and a test/example project usi
 ![](doc/screenshot_2.JPG)
 ![](doc/screenshot_3.JPG)
 
-## Build instruction ##
+## Build instruction
 
-** Windows **
+**Windows**
 Just open the Visual Studio solution in `win\PhysiCam.sln` and build the PhysiCam project and (optional) the PhysiCamTest project.
 
 
-** Linux **
+**Linux**
 
 *TODO*
 
-## Getting started ##
+## Getting started
 
 This instructions will give you a quick example of how to use PhysiCam in your project.
 
-#####initializing#####
+##### initializing
 
 First, we need to include the physicam header:
 `#include <physicam.h>`
@@ -49,17 +49,18 @@ Then we create a physiCam object
 ```
 PhysiCam::CameraPtr physicam = std::make_shared<PhysiCam::Camera>(m_FramebufferWidth, m_FramebufferHeight);
 ```
+
 `m_FramebufferWidth` and `m_FramebufferHeight` are the integer sizes of your screen or framebuffer.
 
 ***
 
-##### postprocessing #####
+##### postprocessing
 
 ==PhysiCam needs two rendertextures: A RGB 32-float texture as color buffer (GL_COLOR_ATTACHMENT0) and a depth texture (GL_DEPTH_ATTACHMENT)==
 
 To use the builtin postprocessing, we need to tell PhysiCam, which framebuffer objects to use for input and output. To do this, we use the `PhysiCamFBOInputDesc` struct.
 Create a local or global variable and put the render texture ids into the struct:
-```
+```C++
 PhysiCam::PhysiCamFBOInputDesc fboInpDesc;
 [...]
 fboInpDesc.FramebufferId = m_Framebuffer->GetId();
@@ -70,7 +71,7 @@ This way we tell PhysiCam which render textures to use for postprocessing input.
 
 Thats all for setting things up. Now we can use the camera.
 
-##### Update/Usage #####
+##### Update/Usage
 
 One of the main things we need is to setup the view matrix on every frame update. You can either use your own calculations and just provide the matrix to PhysiCam:
 `physicam->GetTransform()->SetModelMatrix(mat);`
@@ -84,7 +85,7 @@ To set postprocessing parameters (i.e. inside your update function), get the pos
 ==**Important:** Always call `physicam->Update(deltaTime);` in the end of your update function to update all camera internal matrices and parameters. ==
 
 
-##### Rendering #####
+##### Rendering
 
 For rendering with PhysiCam, just render your scene in the way you always/already do, just make sure verything gets rendered into the previous defined framebuffer/rendertextures and use the same matrices you hand over to physicam previously.
 If you have used the builtin transform class, you can get view and model matrices by calling `physicam->GetViewMatrix()` and `physicam->GetProjectionMatrix()` or get a precalculated View-Projection matrix by calling `GetViewProjectionMatrix()`. Use them to render your objects.
@@ -94,9 +95,9 @@ As you can see, we here hand over the previously defined `PhysiCamFBOInputDesc` 
 The last parameter is the framebuffer id of the output buffer. Here we provide 0, so the final image will be rendered to the default output, which is normally the window back buffer. This will show the final image on the screen.
 Feel free to use your own postprocessing on the hand over framebuffer before calling `RenderPostProcessing`, to do it afterwards, just use your own framebuffer object id as last parameter and do your Postprocessing on it.
 
-##### Complete example #####
+##### Complete example
 
-```
+```C++
 // in main()
 if (!PhysiCam::Camera::Init())
 {
@@ -164,7 +165,7 @@ void Render()
 }
 ```
 
-## Built With ##
+## Built With
 
 * [glm](http://glm.g-truc.net/0.9.8/index.html)
 * [glew-1.13.0](http://glew.sourceforge.net/)
@@ -182,21 +183,21 @@ void Render()
 
 ***
 
-## Contributing ##
+## Contributing
 
 Feel free to fork this repository and create pull requests.
 
-## Authors ##
+## Authors
 
 * **Frank Köhnke** - *initial work* - [0x2A](https://github.com/0x2A)
 
 *Contribute to see your name here :)*
 
-## License ##
+## License
 
 This project is licensed under the Apache 2.0 License - see [LICENSE.md](LICENSE.md) file for details.
 
-## Acknowledgments ##
+## Acknowledgments
 
 * Many thanks to anyone who's code was used
 * Special thankts to Padraic Hennessy and [his blog](https://placeholderart.wordpress.com)
