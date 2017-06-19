@@ -1,8 +1,5 @@
 # PhysiCam #
 
-[TOC]
-
-## About ##
 
 Physicam is an OpenGL library, which provides physically based camera rendering and parameters. It is based on OpenGL and designed to be used as either static library or dynamic library and can be integrated in existing applications.
 
@@ -17,13 +14,16 @@ Physicam is an OpenGL library, which provides physically based camera rendering 
 
 This repository contains the PhysiCam source code and a test/example project using external libraries which are provided inside this repo.
 
+
+![](doc/screenshot_1.JPG)
+![](doc/screenshot_2.JPG)
+![](doc/screenshot_3.JPG)
+
 ## Build instruction ##
 
 ** Windows **
 Just open the Visual Studio solution in `win\PhysiCam.sln` and build the PhysiCam project and (optional) the PhysiCamTest project.
 
-![](doc/screenshot_1.JPG)
-![](doc/screenshot_2.JPG)
 
 ** Linux **
 
