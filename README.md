@@ -194,7 +194,7 @@ Feel free to fork this repository and create pull requests.
 
 ## License
 
-This project is licensed under the Apache 2.0 License - see [LICENSE.md](LICENSE.md) file for details.
+This project is licensed under the GNU General Public License - see [LICENSE.md](LICENSE.md) file for details.
 
 ## Acknowledgments
 
